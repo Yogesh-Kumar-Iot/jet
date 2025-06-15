@@ -55,20 +55,26 @@ nav {
 }
 
 @media (max-width: 768px) {
+  header {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
   .menu-toggle {
     display: block;
+    margin-left: auto;
   }
 
   .nav-links {
     display: none;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
     position: absolute;
     top: 100%;
-    right: 0;
+    right: 40px; /* aligns right of company name */
     background: white;
-    width: 200px;
+    width: 220px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.15);
     border-radius: 6px;
     z-index: 999;
@@ -81,7 +87,7 @@ nav {
 
   .nav-links li {
     width: 100%;
-    padding: 10px 0;
+    padding: 10px 20px;
     border-bottom: 1px solid #eee;
   }
 
@@ -89,6 +95,18 @@ nav {
     border-bottom: none;
   }
 }
+
+
+@media (max-width: 500px) {
+  .nav-links {
+    right: 10px;
+    width: 90vw;
+    max-width: 300px;
+  }
+}
+
+
+
 
 /* ===============================
    Home Page Styles
