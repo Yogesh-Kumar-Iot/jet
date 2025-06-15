@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Indify</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+<header>
+  <h1>Vaibhav</h1>
+  <nav>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="service.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="contact-hero">
+  <h2>Let’s Connect</h2>
+  <p>We're here to bring your ideas to life. Drop us a message and we'll get back to you soon!</p>
+</section>
+
+<section class="contact-content">
+  <div class="contact-form">
+    <h3>Send Us a Message</h3>
+<form id="contactForm">
+  <div class="form-group">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" placeholder="Your full name" required />
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" placeholder="example@domain.com" required />
+  </div>
+
+  <div class="form-group">
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" placeholder="Write your query here..." rows="5" required></textarea>
+  </div>
+
+  <button type="submit" class="send-button">Send Message</button>
+  <p id="form-response" style="margin-top: 10px; font-weight: bold;"></p>
+</form>
+
+<!-- Link external JS at bottom of body -->
+
+
+  </div>
+
+  <div class="contact-info">
+    <h3>Contact Information</h3>
+    <p><strong>Email:</strong> info@indifyengineering.com</p>
+    <p><strong>Phone:</strong> +91 98765 43210</p>
+    <p><strong>Address:</strong> Indify Solutions, Sector 22, Gurugram, India</p>
+
+    <h4>Connect With Us</h4>
+    <div class="social-links">
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>About Us</h3>
+      <p>We provide innovative and affordable engineering solutions tailored to your project needs. Partner with us for a smarter tomorrow.</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Reach Out</h3>
+      <p>Email: info@agriplus.com</p>
+      <p>Phone: +91 9876543210</p>
+      <p>Location: Bhopal, India</p>
+    </div>
+
+    <div class="footer-social">
+      <h3>Social</h3>
+      <a href="#"><img src="icons/facebook.svg" alt="Facebook" /></a>
+      <a href="#"><img src="icons/twitter.svg" alt="Twitter" /></a>
+      <a href="#"><img src="icons/instagram.svg" alt="Instagram" /></a>
+      <a href="#"><img src="icons/linkedin.svg" alt="LinkedIn" /></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Indify Solutions. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- <script src="home.js"></script> -->
+ <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+ <script src="contact.js"></script>
+</body>
+</html>

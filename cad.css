@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f2f2f2;
+  color: #222;
+}
+
+.cad-hero {
+  text-align: center;
+  padding: 40px 20px 10px;
+  background: #0a0a0a;
+  color: white;
+}
+
+.cad-hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.cad-hero p {
+  font-size: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.cad-services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.cad-service-box {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cad-service-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.cad-service-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caption {
+  padding: 20px;
+  background-color: #fafafa;
+}
+
+.caption h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #0a0a0a;
+}
+
+.caption p {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0 0;
+}
+
+
+/* other box */
+
+
+
+.back-button-container {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.back-button {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  padding: 12px 28px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.back-button:hover {
+  background: linear-gradient(135deg, #1c2e57, #244376);
+  transform: translateY(-2px);
+}
+
+
+
+
+
+/* other box css */
+
+.other-services-box {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.other-services-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.25);
+}
+
+.other-services-content h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.other-services-content p {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.explore-link {
+  display: inline-block;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.explore-link:hover {
+  background: rgba(255, 255, 255, 0.35);
+}

@@ -1,0 +1,6 @@
+{
+  "fota": {
+    "version": "1.0",
+    "bin_url": "https://fota-esp32.web.app/firmware.bin"
+  }
+}
