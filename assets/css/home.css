@@ -9,114 +9,6 @@ body {
   color: #111;
 }
 
-/* ===============================
-   Header & Navbar (Common to All)
-   =============================== */
-
-   .logo {
-  height: 50px;
-  width: auto;
-  display: block;
-}
-
-.logo-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  border-bottom: 1px solid #ccc;
-  flex-wrap: wrap;
-}
-
-header h1 {
-  font-size: 28px;
-  color: #1a1a1a;
-  margin: 0;
-}
-
-nav {
-  position: relative;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #222;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: #222;
-  font-size: 16px;
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-  }
-
-  .menu-toggle {
-    display: block;
-    margin-left: auto;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    position: absolute;
-    top: 100%;
-    right: 40px; /* aligns right of company name */
-    background: white;
-    width: 220px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-    border-radius: 6px;
-    z-index: 999;
-    padding: 10px 0;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    width: 100%;
-    padding: 10px 20px;
-    border-bottom: 1px solid #eee;
-  }
-
-  .nav-links li:last-child {
-    border-bottom: none;
-  }
-}
-
-
-@media (max-width: 500px) {
-  .nav-links {
-    right: 10px;
-    width: 90vw;
-    max-width: 300px;
-  }
-}
 
 
 
@@ -125,7 +17,10 @@ nav {
    =============================== */
 .hero {
   position: relative;
-  background: url('images/inus.jpg') no-repeat center center/cover;
+background: url('../images/inus.jpg') no-repeat center center/cover;
+
+
+
   height: 100vh;
   display: flex;
   align-items: center;
@@ -505,92 +400,3 @@ textarea {
   text-decoration: underline;
 }
 
-
-
-/* ===============================
-   Minimal Footer Styles
-   =============================== */
-
-.site-footer {
-  background-color: #4f6377;
-  color: #eee;
-  padding: 20px 15px 10px; /* Reduced vertical padding */
-  font-size: 15px;
-}
-
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px; /* Slightly reduced gap */
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-container > div {
-  flex: 1 1 200px;
-  min-width: 200px;
-}
-
-.footer-about p,
-.footer-contact p {
-  margin: 5px 0; /* Reduced vertical spacing between paragraphs */
-  line-height: 1.4; /* Slightly tighter line height */
-}
-
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-links ul li {
-  margin-bottom: 6px; /* Reduced space between list items */
-}
-
-.footer-links ul li a {
-  text-decoration: none;
-  color: #ccc;
-  transition: color 0.3s;
-}
-
-.footer-links ul li a:hover {
-  color: #fff;
-}
-
-.footer-social a {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.footer-social img {
-  width: 24px;
-  height: 24px;
-  filter: brightness(0) invert(1);
-  transition: transform 0.3s ease;
-}
-
-.footer-social a:hover img {
-  transform: scale(1.2);
-}
-
-.footer-bottom {
-  text-align: center;
-  border-top: 1px solid #444;
-  margin-top: 20px;  /* Reduced margin-top */
-  padding-top: 10px; /* Reduced padding-top */
-  font-size: 14px;
-  color: #aaa;
-}
-
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-container > div {
-    margin-bottom: 20px; /* Reduced bottom margin */
-  }
-}

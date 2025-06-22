@@ -1,0 +1,94 @@
+/* ===============================
+   Navbar Styles (Modular)
+   =============================== */
+.logo {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #ccc;
+  flex-wrap: wrap;
+}
+
+nav {
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #222;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #222;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    right: 40px;
+    background: white;
+    width: 220px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    z-index: 999;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav-links {
+    right: 10px;
+    width: 90vw;
+    max-width: 300px;
+  }
+}

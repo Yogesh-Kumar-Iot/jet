@@ -4,21 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Industrial Components - Indify</title>
-  <link rel="stylesheet" href="ind.css" />
+  <link rel="stylesheet" href="assets/css/ind.css" />
+  <link rel="stylesheet" href="assets/components/navbar.css" />
+<link rel="stylesheet" href="assets/components/footer.css" />
+
 </head>
 <body>
 
-  <header>
-    <h1>Indify</h1>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="service.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- ✅ Include Navbar -->
+  <div include-html="assets/components/navbar.html"></div>
+
 
   <section class="hero">
     <h2>Industrial Components</h2>
@@ -52,6 +47,6 @@
   <div class="back-button-container">
     <a href="service.html" class="back-button">← Explore All Services</a>
   </div>
-
+<script src="assets/js/include.js"></script>
 </body>
 </html>

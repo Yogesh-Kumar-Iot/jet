@@ -6,21 +6,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us - Indify</title>
-  <link rel="stylesheet" href="home.css" />
+<link rel="stylesheet" href="assets/components/navbar.css" />
+<link rel="stylesheet" href="assets/components/footer.css" />
+<link rel="stylesheet" href="assets/css/home.css" />
 </head>
 <body>
-<header>
-  <h1>Vaibhav</h1>
-  <nav>
-    <button class="menu-toggle" id="menuToggle">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="service.html">Services</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+    <!-- ✅ Include Navbar -->
+  <div include-html="assets/components/navbar.html"></div>
 
 <section class="contact-hero">
   <h2>Let’s Connect</h2>
@@ -70,50 +62,15 @@
   </div>
 </section>
 
-<footer class="site-footer">
-  <div class="footer-container">
-    <div class="footer-about">
-      <h3>About Us</h3>
-      <p>We provide innovative and affordable engineering solutions tailored to your project needs. Partner with us for a smarter tomorrow.</p>
-    </div>
-
-    <div class="footer-links">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="service.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-contact">
-      <h3>Reach Out</h3>
-      <p>Email: info@agriplus.com</p>
-      <p>Phone: +91 9876543210</p>
-      <p>Location: Bhopal, India</p>
-    </div>
-
-    <div class="footer-social">
-      <h3>Social</h3>
-      <a href="#"><img src="icons/facebook.svg" alt="Facebook" /></a>
-      <a href="#"><img src="icons/twitter.svg" alt="Twitter" /></a>
-      <a href="#"><img src="icons/instagram.svg" alt="Instagram" /></a>
-      <a href="#"><img src="icons/linkedin.svg" alt="LinkedIn" /></a>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2025 Indify Solutions. All rights reserved.</p>
-  </div>
-</footer>
 
 
 
+  <!-- ✅ Include Footer -->
+  <div include-html="assets/components/footer.html"></div>
 <!-- <script src="home.js"></script> -->
  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
- <script src="contact.js"></script>
-   <script src="home.js"></script>
+ <script src="assets/js/contact.js"></script>
+    <script src="assets/js/include.js"></script>
 </body>
 </html>
