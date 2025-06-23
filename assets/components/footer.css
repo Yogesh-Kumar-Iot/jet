@@ -1,62 +1,81 @@
+/* Footer Base */
 .site-footer {
-  background-color: #4f6377;
-  color: #eee;
-  padding: 40px 20px 15px;
+  background-color: #4A6378;
+  color: #ffffff;
+  padding: 40px 20px 10px;
   font-family: 'Segoe UI', sans-serif;
 }
 
 .footer-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #6d7f94;
 }
 
-.footer-contact-only h3 {
-  font-size: 22px;
-  margin-bottom: 18px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+.footer-contact-only h3,
+.footer-social h3 {
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-.footer-contact-only p {
-  margin: 8px 0;
-  font-size: 16px;
-  color: #ddd;
+.footer-contact-only p,
+.footer-social {
+  margin: 5px 0;
+}
+
+.footer-social .social-icons {
   display: flex;
-  align-items: center;
+  gap: 15px;
   justify-content: center;
-  gap: 10px;
+  margin-top: 10px;
 }
 
-.footer-contact-only i {
-  color: #fff;
-  font-size: 16px;
-  width: 20px;
-  text-align: center;
+.footer-social .social-icons img {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.footer-social .social-icons img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Bottom Text */
 .footer-bottom {
   text-align: center;
   font-size: 14px;
-  margin-top: 15px;
-  color: #bbb;
+  padding-top: 20px;
+  color: #666;
 }
 
-@media (max-width: 768px) {
-  .footer-contact-only h3 {
-    font-size: 20px;
+/* Responsive */
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 1200px;
+    margin: auto;
   }
 
-  .footer-contact-only p {
-    font-size: 15px;
+  .footer-contact-only,
+  .footer-social {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .footer-bottom {
-    font-size: 13px;
+  .footer-social h3 {
+    margin-bottom: 10px;
+  }
+
+  .footer-social .social-icons {
+    justify-content: flex-start;
   }
 }
