@@ -1,39 +1,36 @@
-function includeHTML(callback) {
-  var elements = document.querySelectorAll("[include-html]");
-  var count = elements.length;
+document.addEventListener("DOMContentLoaded", function () {
+  includeHTML();
+});
 
-  elements.forEach(function(elm) {
-    var file = elm.getAttribute("include-html");
+function includeHTML() {
+  const elements = document.querySelectorAll("[include-html]");
+  elements.forEach(el => {
+    const file = el.getAttribute("include-html");
     if (file) {
       fetch(file)
         .then(response => {
           if (response.ok) return response.text();
-          throw new Error('Page not found.');
+          throw new Error("Page not found");
         })
         .then(data => {
-          elm.innerHTML = data;
-          elm.removeAttribute("include-html");
-          count--;
-          if (count === 0 && typeof callback === "function") callback();
+          el.innerHTML = data;
+          el.removeAttribute("include-html");
+
+          // Re-run scripts inside included file
+          const scripts = el.querySelectorAll("script");
+          scripts.forEach(oldScript => {
+            const newScript = document.createElement("script");
+            newScript.textContent = oldScript.textContent;
+            oldScript.replaceWith(newScript);
+          });
+
+          // Recursively include any new includes inside loaded content
+          includeHTML();
         })
-        .catch(() => {
-          elm.innerHTML = "Component not found.";
-          count--;
-          if (count === 0 && typeof callback === "function") callback();
+        .catch(err => {
+          el.innerHTML = "Content not found.";
+          console.error(err);
         });
     }
   });
 }
-
-// ✅ Call the function and only then load other scripts
-includeHTML(function () {
-  // Now run toggle script safely
-  const toggle = document.getElementById("menuToggle");
-  const nav = document.getElementById("navLinks");
-
-  if (toggle && nav) {
-    toggle.addEventListener("click", function () {
-      nav.classList.toggle("active");
-    });
-  }
-});
