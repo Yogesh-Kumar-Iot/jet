@@ -17,7 +17,7 @@ body {
    =============================== */
 .hero {
   position: relative;
-background: url('../images/inus.jpg') no-repeat center center/cover;
+background: url('../images/whiteback.jpg') no-repeat center center/cover;
 
 
 
@@ -25,17 +25,25 @@ background: url('../images/inus.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: rgb(0, 0, 0);
   overflow: hidden;
 }
 
-.hero-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
+/* .hero-overlay {
+  background-color: rgba(0, 0, 0, 0.2); 
+  padding: 60px 30px;
+  text-align: center;
+  border-radius: 10px;
+  animation: fadeSlideIn 1s ease forwards;
+} */
+ .hero-overlay {
   padding: 60px 30px;
   text-align: center;
   border-radius: 10px;
   animation: fadeSlideIn 1s ease forwards;
 }
+
+
 
 .hero h2 {
   font-size: 40px;
@@ -45,7 +53,7 @@ background: url('../images/inus.jpg') no-repeat center center/cover;
 
 .hero p {
   font-size: 20px;
-  color: #ddd;
+  color: #000000;
   margin-bottom: 30px;
 }
 

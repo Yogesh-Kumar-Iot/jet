@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard - Contact Messages</title>
+  <link rel="stylesheet" href="/data/admin .css" />
+</head>
+<body>
+  <section class="admin-container">
+    <h1>📬 Contact Messages</h1>
+    <div class="stats">
+      Total Messages: <span id="message-count">0</span>
+    </div>
+    <div id="messages-list" class="message-list">
+      <!-- Messages will be loaded here -->
+    </div>
+  </section>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
+  <!-- Admin JS -->
+  <script src="/data/admin.js"></script>
+</body>
+</html>
