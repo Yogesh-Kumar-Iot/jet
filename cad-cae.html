@@ -67,5 +67,73 @@
   <!-- ✅ JavaScript Files -->
   
   <script src="assets/js/include.js"></script>
+
+
+
+
+  <!-- Contact Form Modal -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h2>Get in Touch</h2>
+    <form id="popupContactForm">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" required />
+      </div>
+      <div class="form-group">
+        <label>Company Name</label>
+        <input type="text" required />
+      </div>
+      <div class="form-group">
+        <label>Subject</label>
+        <input type="text" required />
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <textarea rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <label>Attach Your Documents</label>
+        <input type="file" />
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" required />
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" required />
+      </div>
+      <button type="submit" class="send-button">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+
+
+<script>
+  // Open modal on any .cad-service-box click
+  document.querySelectorAll('.cad-service-box').forEach(box => {
+    box.addEventListener('click', () => {
+      document.getElementById('contactModal').style.display = 'block';
+    });
+  });
+
+  // Close modal on close button click
+  document.querySelector('.close-button').addEventListener('click', () => {
+    document.getElementById('contactModal').style.display = 'none';
+  });
+
+  // Close modal when clicking outside the modal
+  window.addEventListener('click', (e) => {
+    const modal = document.getElementById('contactModal');
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+</script>
+
 </body>
 </html>
