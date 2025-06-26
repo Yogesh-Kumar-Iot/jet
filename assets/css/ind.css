@@ -71,3 +71,46 @@ body {
 .back-button:hover {
   background-color: #092c6e;
 }
+
+
+/* OTHER SERVICES BOX */
+.other-services-box {
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Unique background */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.2s ease;
+  color: #fff; /* White text on gradient */
+}
+
+.other-services-box:hover {
+  transform: translateY(-5px);
+}
+
+.other-services-content h3 {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.other-services-content p {
+  font-size: 14px;
+  margin: 10px 0 16px;
+  padding: 0 10px;
+}
+
+.explore-link {
+  display: inline-block;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.explore-link:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
