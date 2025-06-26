@@ -1,121 +1,181 @@
+/* === Base === */
 body {
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", sans-serif;
-  background-color: #f5f7fa;
+  background: #f9f9f9;
   color: #333;
 }
 
-.hero-section {
-  background: linear-gradient(to right, #0f172a, #1e293b);
-  color: white;
+/* === Hero Section === */
+.hero {
+  background-color: #eaeaea;
+  padding: 40px 20px;
   text-align: center;
-  padding: 60px 20px;
 }
 
-.hero-section h1 {
-  font-size: 3rem;
+.hero h2 {
+  font-size: 2.5em;
   margin-bottom: 10px;
 }
 
-.hero-section p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto;
-  opacity: 0.9;
+.hero p {
+  font-size: 1.1em;
+  color: #444;
 }
 
-.parts-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+/* === Motorcycle Parts Grid (Styled like components-gallery) === */
+.components-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
-  padding: 50px 10%;
-  box-sizing: border-box;
+  padding: 40px 20px;
 }
 
-.part-box {
+.component-card {
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 280px;
   text-align: center;
   padding: 20px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
 }
 
-.part-box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+.component-card:hover {
+  transform: translateY(-5px);
 }
 
-.part-box img {
+.component-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 15px;
 }
 
-.part-box h3 {
-  font-size: 1.4rem;
-  margin-bottom: 8px;
-  color: #111827;
+.component-card h3 {
+  margin-top: 15px;
+  color: #0b3d91;
+  font-size: 1.2em;
 }
 
-.part-box p {
+.component-card p {
   font-size: 0.95rem;
   color: #555;
-  line-height: 1.5;
 }
 
-.contact-cta {
+/* === Other Services Box === */
+.other-services-box {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 280px;
   text-align: center;
-  padding: 60px 20px;
-  background-color: #1d4ed8;
+  padding: 20px;
+  transition: transform 0.2s ease;
+  color: #fff;
+}
+
+.other-services-box:hover {
+  transform: translateY(-5px);
+}
+
+.other-services-content h3 {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.other-services-content p {
+  font-size: 14px;
+  margin: 10px 0 16px;
+  padding: 0 10px;
+}
+
+/* === Back Button === */
+.back-button-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.back-button {
+  background-color: #0b3d91;
   color: white;
-}
-
-.contact-cta h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-.contact-cta p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-
-.cta-button {
-  background: #fff;
-  color: #1d4ed8;
-  padding: 12px 26px;
+  padding: 10px 20px;
+  text-decoration: none;
   border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.cta-button:hover {
-  background: #e0e7ff;
-  color: #1e3a8a;
-}
-
-.back-link {
-  text-align: center;
-  margin: 40px 0 20px;
-}
-
-.back-link a {
-  color: #1d4ed8;
   font-weight: bold;
-  text-decoration: none;
 }
 
-.back-link a:hover {
-  text-decoration: underline;
+.back-button:hover {
+  background-color: #092c6e;
 }
 
 
 
 
 
+
+/* === MODAL POPUP STYLING === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 80px auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  position: relative;
+}
+
+.close-button {
+  color: #aaa;
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-size: 28px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.close-button:hover {
+  color: #000;
+}
+
+.modal .form-group {
+  margin-bottom: 18px;
+}
+
+.modal label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #333;
+}
+
+.modal input,
+.modal textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.modal textarea {
+  resize: vertical;
+}

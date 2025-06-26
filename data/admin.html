@@ -8,20 +8,26 @@
 </head>
 <body>
   <section class="admin-container">
-    <h1>📬 Contact Messages</h1>
-    <div class="stats">
-      Total Messages: <span id="message-count">0</span>
+    <h1>📬 Admin Dashboard</h1>
+
+    <!-- Popup Contact Form Messages -->
+    <div class="message-section">
+      <h2>🪟 Popup Contact Form</h2>
+      <div class="stats">Total: <span id="popup-count">0</span></div>
+      <div id="popup-messages" class="message-list"></div>
     </div>
-    <div id="messages-list" class="message-list">
-      <!-- Messages will be loaded here -->
+
+    <!-- Normal Contact Form Messages -->
+    <div class="message-section">
+      <h2>📥 Contact Form</h2>
+      <div class="stats">Total: <span id="contact-count">0</span></div>
+      <div id="contact-messages" class="message-list"></div>
     </div>
   </section>
 
-  <!-- Firebase SDKs -->
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
-
-  <!-- Admin JS -->
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
   <script src="/data/admin.js"></script>
 </body>
 </html>

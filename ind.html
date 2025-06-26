@@ -4,86 +4,102 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Industrial Components - Indify</title>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-storage-compat.js"></script>
+
   <link rel="stylesheet" href="assets/css/ind.css" />
   <link rel="stylesheet" href="assets/components/navbar.css" />
-<link rel="stylesheet" href="assets/components/footer.css" />
-
+  <link rel="stylesheet" href="assets/components/footer.css" />
 </head>
 <body>
 
-    <!-- ✅ Include Navbar -->
-  <div include-html="assets/components/navbar.html"></div>
+<!-- ✅ Include Navbar -->
+<div include-html="assets/components/navbar.html"></div>
 
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-  <section class="hero">
-    <h2>Industrial Components</h2>
-    <p>If you want our Industrial Components, you can contact us below.</p>
-  </section>
+  <hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
 
-  <section class="components-gallery">
-    <div class="component-card">
-      <img src="/assets/images/ind.jpg" alt="Gears" />
-      <h3>Precision Gear</h3>
-      <p>High-quality steel gear for industrial machines.</p>
-    </div>
-    <div class="component-card">
-      <img src="/assets/images/ind.jpg" alt="Bushing and Sleeves" />
-      <h3>Bushing and Sleeves</h3>
-      <p>Durable bearings designed for heavy loads.</p>
-    </div>
-    
-    <div class="component-card">
-      <img src="/assets/images/ind.jpg" alt="Machined Shafts" />
-      <h3>Machined Shafts</h3>
-      <p>Custom-length shafts with precision finishing.</p>
-    </div>
-    
-    
-    <div class="other-services-box">
-  <div class="other-services-content">
-    <h3>OTHER SERVICES</h3>
-    <p>Explore a wider range of engineering solutions including prototyping, product design, and manufacturing support.</p>
-    <a href="service.html" class="explore-link">View More →</a>
+
+<section class="hero">
+  <h2>Industrial Components</h2>
+  <p>If you want our Industrial Components, you can contact us below.</p>
+</section>
+
+<section class="components-gallery">
+  <div class="component-card">
+    <img src="/assets/images/ind.jpg" alt="Gears" />
+    <h3>Precision Gear</h3>
+    <p>High-quality steel gear for industrial machines.</p>
   </div>
+  <div class="component-card">
+    <img src="/assets/images/ind.jpg" alt="Bushing and Sleeves" />
+    <h3>Bushing and Sleeves</h3>
+    <p>Durable bearings designed for heavy loads.</p>
+  </div>
+  <div class="component-card">
+    <img src="/assets/images/ind.jpg" alt="Machined Shafts" />
+    <h3>Machined Shafts</h3>
+    <p>Custom-length shafts with precision finishing.</p>
+  </div>
+  <div class="other-services-box">
+    <div class="other-services-content">
+      <h3>OTHER SERVICES</h3>
+      <p>Explore a wider range of engineering solutions including prototyping, product design, and manufacturing support.</p>
+    </div>
+  </div>
+</section>
+
+<div class="back-button-container">
+  <a href="service.html" class="back-button">← Explore All Services</a>
 </div>
 
-</div>
-  </section>
-<!-- ✅ Other Services Box -->
+<!-- ✅ Include Footer -->
+<div include-html="assets/components/footer.html"></div>
 
-
-  <div class="back-button-container">
-    <a href="service.html" class="back-button">← Explore All Services</a>
-  </div>
-
-    <!-- ✅ Include Footer -->
-  <div include-html="assets/components/footer.html"></div>
-
+<!-- ✅ JavaScript Files -->
 <script src="assets/js/include.js"></script>
+<script src="/assets/js/cont.js"></script>
+
+ <!-- ✅ Contact Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Get in Touch</h2>
+      <form id="popupContactForm">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" name="name" required />
+        </div>
+        <div class="form-group">
+          <label>Company Name</label>
+          <input type="text" name="company" required />
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" name="subject" required />
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea name="description" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+          <label>Attach Your Documents</label>
+          <input type="file" name="attachment" />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" name="phone" required />
+        </div>
+        <button type="submit" class="send-button">Submit</button>
+      </form>
+    </div>
+  </div>
+
 </body>
 </html>

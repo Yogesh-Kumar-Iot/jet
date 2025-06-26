@@ -1,29 +1,37 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f7f9fc;
-  color: #333;
+  background-color: #f4f7fb;
   margin: 0;
   padding: 20px;
 }
 
 .admin-container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
   padding: 20px;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   color: #0078d4;
 }
 
+.message-section {
+  margin-bottom: 50px;
+}
+
+.message-section h2 {
+  color: #222;
+  border-left: 5px solid #0078d4;
+  padding-left: 10px;
+}
+
 .stats {
-  text-align: center;
   font-weight: bold;
-  margin-bottom: 30px;
-  font-size: 18px;
-  color: #444;
+  margin: 10px 0 20px;
+  font-size: 15px;
+  color: #555;
 }
 
 .message-list {
@@ -33,55 +41,52 @@ h1 {
 }
 
 .message-card {
-  background-color: #ffffff;
-  border-left: 5px solid #0078d4;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  background: white;
   padding: 20px;
-  transition: transform 0.2s ease;
+  border-radius: 8px;
+  border-left: 5px solid #0078d4;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
   position: relative;
 }
 
 .message-card:hover {
   transform: scale(1.01);
+  transition: transform 0.2s ease-in-out;
 }
 
-.message-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.message-header h3 {
-  margin: 0;
-  font-size: 20px;
+.message-card h3 {
+  margin: 0 0 10px;
 }
 
 .timestamp {
   font-size: 12px;
-  color: #666;
+  color: #777;
 }
 
 .message-card p {
-  margin: 8px 0;
-  line-height: 1.4;
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+a.attachment-link {
+  color: #0078d4;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .delete-btn {
   position: absolute;
-  top: 50px;
+  top: 15px;
   right: 20px;
-  background-color: #ff4d4d;
+  background-color: #e53935;
   color: white;
   border: none;
-  padding: 6px 10px;
-  font-size: 13px;
+  padding: 6px 12px;
   border-radius: 5px;
+  font-size: 13px;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
 .delete-btn:hover {
-  background-color: #e60000;
+  background-color: #c62828;
 }

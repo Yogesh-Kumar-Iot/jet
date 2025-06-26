@@ -4,20 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CAD & CAE Services</title>
+
+  <!-- ✅ Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-storage-compat.js"></script>
+
   <link rel="stylesheet" href="assets/css/cad.css" />
 </head>
 <body>
 
-
-  <!-- ✅ Include Navbar -->
+  <!-- ✅ Navbar -->
   <div include-html="assets/components/navbar.html"></div>
-<hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
 
+  <hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
+
+
+  <!-- ✅ Hero Section -->
   <section class="cad-hero">
     <h1>CAD & CAE SERVICES</h1>
     <p>Empowering innovation through expert modeling, drafting, simulation, and reverse engineering solutions.</p>
   </section>
 
+  <!-- ✅ CAD Services Section -->
   <div class="cad-services-container">
     <div class="cad-service-box">
       <img src="/assets/images/cad.jpg" alt="3D Modeling" />
@@ -48,92 +57,62 @@
       </div>
     </div>
     <div class="cad-service-box other-services-box">
-  <div class="other-services-content">
-    <h3>OTHER SERVICES</h3>
-    <p>Explore a wider range of engineering solutions including prototyping, product design, and manufacturing support.</p>
-    <a href="service.html" class="explore-link">View More →</a>
+      <div class="other-services-content">
+        <h3>OTHER SERVICES</h3>
+        <p>Explore a wider range of engineering solutions including prototyping, product design, and manufacturing support.</p>
+      </div>
+    </div>
   </div>
-</div>
 
+  <!-- ✅ Back Button -->
+  <div class="back-button-container">
+    <a href="service.html" class="back-button">← Back to Services</a>
   </div>
-<div class="back-button-container">
-  <a href="service.html" class="back-button">← Back to Services</a>
-</div>
 
-
-  <!-- ✅ Include Footer -->
+  <!-- ✅ Footer -->
   <div include-html="assets/components/footer.html"></div>
 
-  <!-- ✅ JavaScript Files -->
-  
-  <script src="assets/js/include.js"></script>
-
-
-
-
-  <!-- Contact Form Modal -->
-<div id="contactModal" class="modal">
-  <div class="modal-content">
-    <span class="close-button">&times;</span>
-    <h2>Get in Touch</h2>
-    <form id="popupContactForm">
-      <div class="form-group">
-        <label>Name</label>
-        <input type="text" required />
-      </div>
-      <div class="form-group">
-        <label>Company Name</label>
-        <input type="text" required />
-      </div>
-      <div class="form-group">
-        <label>Subject</label>
-        <input type="text" required />
-      </div>
-      <div class="form-group">
-        <label>Description</label>
-        <textarea rows="4" required></textarea>
-      </div>
-      <div class="form-group">
-        <label>Attach Your Documents</label>
-        <input type="file" />
-      </div>
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" required />
-      </div>
-      <div class="form-group">
-        <label>Phone Number</label>
-        <input type="tel" required />
-      </div>
-      <button type="submit" class="send-button">Submit</button>
-    </form>
+  <!-- ✅ Contact Form Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Get in Touch</h2>
+      <form id="popupContactForm">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" name="name" required />
+        </div>
+        <div class="form-group">
+          <label>Company Name</label>
+          <input type="text" name="company" required />
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" name="subject" required />
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea name="description" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+          <label>Attach Your Documents</label>
+          <input type="file" name="attachment" />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" name="phone" required />
+        </div>
+        <button type="submit" class="send-button">Submit</button>
+      </form>
+    </div>
   </div>
-</div>
 
-
-
-
-<script>
-  // Open modal on any .cad-service-box click
-  document.querySelectorAll('.cad-service-box').forEach(box => {
-    box.addEventListener('click', () => {
-      document.getElementById('contactModal').style.display = 'block';
-    });
-  });
-
-  // Close modal on close button click
-  document.querySelector('.close-button').addEventListener('click', () => {
-    document.getElementById('contactModal').style.display = 'none';
-  });
-
-  // Close modal when clicking outside the modal
-  window.addEventListener('click', (e) => {
-    const modal = document.getElementById('contactModal');
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
-</script>
-
+  <!-- ✅ External Scripts -->
+  <script src="assets/js/include.js"></script>
+  <script src="/assets/js/cont.js"></script>
 </body>
 </html>
