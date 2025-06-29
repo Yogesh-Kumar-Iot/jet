@@ -1,0 +1,25 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="/data/login.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h2>🔐 Admin Login</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <!-- ✅ Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+  <!-- ✅ Your login logic (AFTER Firebase SDKs) -->
+  <script src="/data/login.js"></script>
+</body>
+</html>

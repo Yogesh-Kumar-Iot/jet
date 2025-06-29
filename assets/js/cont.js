@@ -1,4 +1,3 @@
-// === cont.js ===
 document.addEventListener('DOMContentLoaded', function () {
   const modal = document.getElementById('contactModal');
   const closeBtn = document.querySelector('.close-button');
@@ -53,11 +52,19 @@ document.addEventListener('DOMContentLoaded', function () {
       const file = fileInput?.files[0];
 
       let fileURL = '';
+      const MAX_FILE_SIZE_MB = 5; // ✅ Max 5 MB
 
       try {
-        // ✅ Upload file if provided
+        // ✅ Validate file size if file is selected
         if (file) {
-          const storageRef = storage.ref('attachments/' + Date.now() + '_' + file.name);
+          const fileSizeMB = file.size / (1024 * 1024); // Convert to MB
+          if (fileSizeMB > MAX_FILE_SIZE_MB) {
+            alert(`❌ File too large. Max size is ${MAX_FILE_SIZE_MB} MB.`);
+            return;
+          }
+
+          // ✅ Upload file to Firebase Storage
+          const storageRef = storage.ref(`attachments/${Date.now()}_${file.name}`);
           const snapshot = await storageRef.put(file);
           fileURL = await snapshot.ref.getDownloadURL();
         }
