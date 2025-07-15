@@ -29,6 +29,25 @@ db.ref("contactPopupMessages").on("value", snapshot => {
       const card = document.createElement("div");
       card.className = "message-card";
 
+      let attachmentHTML = "";
+      if (msg.fileURL) {
+        const fileURL = msg.fileURL;
+        const lower = fileURL.toLowerCase();
+
+        if (/\.(jpg|jpeg|png|gif|bmp|webp)$/.test(lower)) {
+          attachmentHTML = `
+            <a class="attachment-link" href="${fileURL}" target="_blank">
+              <img src="${fileURL}" alt="attachment" style="max-height:100px; border-radius:6px; margin-top:5px;">
+            </a>`;
+        } else if (lower.endsWith(".pdf")) {
+          attachmentHTML = `
+            <a class="attachment-link" href="${fileURL}" target="_blank">📄 View PDF</a>`;
+        } else {
+          attachmentHTML = `
+            <a class="attachment-link" href="${fileURL}" target="_blank">🔗 View File</a>`;
+        }
+      }
+
       card.innerHTML = `
         <h3>${msg.name}</h3>
         <p><strong>Company:</strong> ${msg.company || "-"}</p>
@@ -36,7 +55,7 @@ db.ref("contactPopupMessages").on("value", snapshot => {
         <p><strong>Description:</strong><br>${msg.description || "-"}</p>
         <p><strong>Email:</strong> ${msg.email}</p>
         <p><strong>Phone:</strong> ${msg.phone}</p>
-        ${msg.fileURL ? `<p><strong>Attachment:</strong> <a class="attachment-link" href="${msg.fileURL}" target="_blank">View File</a></p>` : ""}
+        ${attachmentHTML ? `<p><strong>Attachment:</strong><br>${attachmentHTML}</p>` : ""}
         <p class="timestamp">${new Date(msg.timestamp).toLocaleString()}</p>
         <button class="delete-btn" data-type="popup" data-key="${key}">Delete</button>
       `;
